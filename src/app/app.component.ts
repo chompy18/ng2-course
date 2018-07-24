@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
-import { Router } from "@angular/router";
-import { useStrict } from "mobx";
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
+// import {useStrict} from 'mobx';
 
-useStrict(true);
+// useStrict(true);
 
 @Component({
     selector: 'my-app',

@@ -1,5 +1,5 @@
-import { Injectable } from "@angular/core";
-import { observable, action, computed } from "mobx";
+import {Injectable} from '@angular/core';
+import {action, computed, observable} from 'mobx';
 
 @Injectable()
 export class ShowStore {
@@ -13,18 +13,6 @@ export class ShowStore {
     constructor() {
     }
 
-    @action
-    setShows(shows: any[]) {
-        this.shows = shows
-            .map(showObj => showObj.show)
-            .filter(show => show.image !== null);
-    }
-
-    @action
-    setCurrentShow(show: any) {
-        this.currentShow = show;
-    }
-
     @computed
     get currentShowCast() {
         return this.currentShow._embedded.cast.filter(castMember => {
@@ -35,5 +23,17 @@ export class ShowStore {
     @computed
     get currentShowSeasons() {
         return this.currentShow._embedded.seasons;
+    }
+
+    @action
+    setShows(shows: any[]) {
+        this.shows = shows
+            .map(showObj => showObj.show)
+            .filter(show => show.image !== null);
+    }
+
+    @action
+    setCurrentShow(show: any) {
+        this.currentShow = show;
     }
 }

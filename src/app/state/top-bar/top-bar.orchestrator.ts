@@ -1,5 +1,5 @@
-import { Injectable } from "@angular/core";
-import { TopBarStore } from "./top-bar.store";
+import {Injectable} from '@angular/core';
+import {TopBarStore} from './top-bar.store';
 
 @Injectable()
 export class TopBarOrchestrator {

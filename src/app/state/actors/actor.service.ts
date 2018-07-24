@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
-import { Observable } from "rxjs";
+import {Observable, of} from "rxjs";
 
 @Injectable()
 export class ActorService {
@@ -32,9 +32,9 @@ export class ActorServiceMock {
 
     getActorShows(actorId: number): Observable<any> {
         if (this.testError) {
-            return Observable.of(this.testError);
+            return of(this.testError);
         }
 
-        return Observable.of(this.testResponse);
+        return of(this.testResponse);
     }
 }

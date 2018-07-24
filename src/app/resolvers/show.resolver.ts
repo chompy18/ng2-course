@@ -1,7 +1,7 @@
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { ShowsOrchestrator } from "../state/shows/shows.orchestrator";
+import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
+import {ShowsOrchestrator} from '../state/shows/shows.orchestrator';
 
 @Injectable()
 export class ShowResolver implements Resolve<any> {
